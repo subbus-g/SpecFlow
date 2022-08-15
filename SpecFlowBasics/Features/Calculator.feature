@@ -15,7 +15,8 @@ Scenario: Add two numbers
 
 Scenario: Working with table
 Given I input following numbers to the calculator
-	| Number  |
-	| 50      |
+	| Number |
+	| 50     |
+	| 70     |
 When the two numbers are added
 Then the result should be 120

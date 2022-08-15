@@ -156,13 +156,15 @@ this.ScenarioInitialize(scenarioInfo);
                             "Number"});
                 table1.AddRow(new string[] {
                             "50"});
+                table1.AddRow(new string[] {
+                            "70"});
 #line 17
 testRunner.Given("I input following numbers to the calculator", ((string)(null)), table1, "Given ");
 #line hidden
-#line 20
+#line 21
 testRunner.When("the two numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
+#line 22
 testRunner.Then("the result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -40,8 +40,11 @@ namespace SpecFlowBasics.StepDefinitions
         [Given(@"I input following numbers to the calculator")]
         public void GivenIInputFollowingNumbersToTheCalculator(Table table)
         {
-            var data = table.CreateInstance<Data>();
-            Console.WriteLine("the number in data: "+data.Number); 
+            var datas = table.CreateSet<Data>();
+            foreach (var data in datas)
+            {
+                Console.WriteLine(data.Number);
+            }
         }
         public class Data
         {
