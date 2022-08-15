@@ -40,10 +40,11 @@ namespace SpecFlowBasics.StepDefinitions
         [Given(@"I input following numbers to the calculator")]
         public void GivenIInputFollowingNumbersToTheCalculator(Table table)
         {
-            var datas = table.CreateSet<Data>();
+            IEnumerable<dynamic> datas = table.CreateDynamicSet();
             foreach (var data in datas)
             {
                 Console.WriteLine(data.Number);
+                Console.WriteLine(data.Number.GetType());
             }
         }
         public class Data
