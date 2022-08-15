@@ -1,3 +1,5 @@
+using TechTalk.SpecFlow.Assist;
+
 namespace SpecFlowBasics.StepDefinitions
 {
     [Binding]
@@ -35,5 +37,15 @@ namespace SpecFlowBasics.StepDefinitions
             Console.WriteLine("the result is: "+result);
         }
 
+        [Given(@"I input following numbers to the calculator")]
+        public void GivenIInputFollowingNumbersToTheCalculator(Table table)
+        {
+            var data = table.CreateInstance<Data>();
+            Console.WriteLine("the number in data: "+data.Number); 
+        }
+        public class Data
+        {
+            public int Number { get; set; }
+        }
     }
 }

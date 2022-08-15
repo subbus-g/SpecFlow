@@ -13,3 +13,9 @@ Scenario: Add two numbers
 	Then the result should be 120
 	And the result is "PASS"
 
+Scenario: Working with table
+Given I input following numbers to the calculator
+	| Number  |
+	| 50      |
+When the two numbers are added
+Then the result should be 120
